@@ -236,6 +236,7 @@ class VideoColorizer:
         return stream_data['avg_frame_rate']
 
     def _download_video_from_url(self, source_url, source_path: Path):
+        return
         if source_path.exists():
             source_path.unlink()
 
@@ -335,7 +336,8 @@ class VideoColorizer:
 
     ) -> Path:
         source_path = self.source_folder / file_name
-        self._download_video_from_url(source_url, source_path)
+#        self._download_video_from_url(source_url, source_path)
+        source_path = input("-"*100+"\n请您从左侧copy电影路径，并按回车键\n")
         return self._colorize_from_path(
             source_path, render_factor=render_factor, post_process=post_process,watermarked=watermarked
         )
