@@ -333,11 +333,12 @@ class VideoColorizer:
         render_factor: int = None,
         post_process: bool = True,
         watermarked: bool = True,
-
+        movie_path: str
     ) -> Path:
         source_path = self.source_folder / file_name
 #        self._download_video_from_url(source_url, source_path)
-        source_path = input("-"*100+"\n请您从左侧copy电影路径，并按回车键\n")
+#        source_path = input("-"*100+"\n请您从左侧copy电影路径，并按回车键\n")
+        source_path = movie_path
         source_path = Path(source_path)
         return self._colorize_from_path(
             source_path, render_factor=render_factor, post_process=post_process,watermarked=watermarked
