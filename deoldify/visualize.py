@@ -330,7 +330,7 @@ class VideoColorizer:
         self,
         source_url,
         file_name: str,
-        movie_path: str
+        movie_path: str,
         render_factor: int = None,
         post_process: bool = True,
         watermarked: bool = True,
