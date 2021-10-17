@@ -330,10 +330,11 @@ class VideoColorizer:
         self,
         source_url,
         file_name: str,
+        movie_path: str
         render_factor: int = None,
         post_process: bool = True,
         watermarked: bool = True,
-        movie_path: str
+
     ) -> Path:
         source_path = self.source_folder / file_name
 #        self._download_video_from_url(source_url, source_path)
